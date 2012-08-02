@@ -1,0 +1,4 @@
+#!/bin/bash
+
+scp $1 glotzerlab.engin.umich.edu:~/Sites/smgz/data
+ssh glotzerlab.engin.umich.edu 'cd ~/Sites/smgz; rm data.zip; zip -r data.zip data'

@@ -1,0 +1,34 @@
+/** \mainpage Glotzilla Shape Matching Library (SMAC)
+ 
+\section intro_sec Introduction 
+In many computer science applications, a technique known as "shape matching" 
+is used to identify unknown structures.  Common applications include retrieving 
+fingerprints from a criminal database or verifying signatures electronically.  
+In the context of materials and thermodynamics research, we can use shape 
+matching methods to identify structures formed by or from particle systems.  
+To this end, we have created a new C++/python library to perform shape 
+matching analysis.  The source code is available at www.matforge.org. 
+
+- \subpage references
+
+\image html "matching.jpg"
+
+\section status_sec Current Status
+ We can currently perform many standard shape matching schemes in the context
+ of particle systems.  We have also implemented several examples. The library 
+ currently works in C++. Python and MATLAB support will be implemented shortly.  
+ To get the current version of the code, or to become a developer, visit our
+ track site: 
+  - http://matforge.org.
+
+\section design_sec Design Goals
+
+The code is mostly written in C, using containers from the standard template
+library (STL), which are themselves written in C++.  The code is designed for
+ease of integration into other codes, as well as for interfacing with python 
+and MATLAB.  
+ \subpage design.
+
+\section Examples
+
+*/

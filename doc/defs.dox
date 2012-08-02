@@ -1,0 +1,13 @@
+/**
+	\defgroup types Typedefs
+	\defgroup io Reading / Writing Data
+	\defgroup extract Shape Extraction
+	\defgroup shpdesc Shape Descriptors
+	\defgroup matchfun Matching Functions
+	\defgroup analysis Standard Analysis Schemes
+	\defgroup pre Preprocessing
+	\defgroup reg Registration
+	\defgroup cluster Clustering
+	\defgroup diag Diagnostics
+	\defgroup util Utility functions
+*/

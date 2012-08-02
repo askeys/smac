@@ -1,0 +1,12 @@
+/**
+\page design Code Design
+
+\section des_sec Desired Attributes
+
+- Simple C-like functions written in C++
+- Logical C-like function names (no caps/underscores, keep short)
+- Pass by reference rather than by copy
+- Pass by references over pass by pointer
+- No exposed classes
+
+*/

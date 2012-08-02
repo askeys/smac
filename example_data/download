@@ -1,0 +1,36 @@
+#!/bin/bash
+
+DATAURL=http://glotzerlab.engin.umich.edu/~askeys/smgz
+
+CURL_COMMAND=$(which curl)
+WGET_COMMAND=$(which wget)
+
+DL_COMMAND=""
+
+if [ "X$CURL_COMMAND" != "X" ]; then
+	DL_COMMAND="curl -O $DATAURL"
+elif [ "X$WGET_COMMAND" != "X" ]; then
+	DL_COMMAND="wget --tries=10 $DATAURL"
+else
+	echo "ERROR: couldn't find the software required to download the example data"
+	exit -1
+fi
+
+#Y=$(echo "$*" | grep -i all)
+
+DL_LIST=$*
+
+if [ "X$*" == "X" ]; then
+	DL_LIST="data"
+fi
+
+for var1 in $DL_LIST; do
+	$DL_COMMAND/${var1}.zip
+done
+
+for var1 in $DL_LIST; do
+	unzip ${var1}.zip
+done
+
+mv data/* .
+rm -rf data data.zip
