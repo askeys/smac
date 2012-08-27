@@ -306,7 +306,7 @@ namespace smac
 			if(!(counted[nbr[j]])) {
 				if (cluster_function(i, nbr[j], args)) {
 					add2cluster_recursive(
-						nbr[j], n, cluster, counted, cluster_function, args);
+						nbr[j], n, cluster, counted, cell_list, cluster_function, args);
 				}
 			}
 		}
@@ -333,7 +333,7 @@ namespace smac
 			box.boxhi.push_back(0.0);
 			box.boxhi.push_back(0.0);
 		}
-
+            
 		CellList cell_list;
 		cell_list.clear();
 		cell_list.setBox(box.boxlo, box.boxhi);
